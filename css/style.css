@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url(//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE);
+
+:root {
+  --gray: #d3d3d3;
+  --orange: #ec5242;
+  --black: #272a31;
+  --lato: Lato, sans-serif;
+  --coco: cocogoose, sans-serif;
+}
+
+/* Start Menu overlay */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255); /* Black fallback color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.overlay-content a {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: left;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* End Menu overlat */
+
+.header-wrap {
+  padding: 10px 20px;
+  background-color: var(--gray);
+}
+.title {
+  font-family: var(--lato);
+  font-size: 25px;
+  color: var(--orange);
+}
+.mobile-header h1 {
+  font-family: var(--coco);
+  line-height: 1.2;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+.header-p {
+  border: 2px;
+  border-style: solid;
+  border-color: whitesmoke;
+  padding: 20px;
+  font-family: var(--lato);
+}
+.feture-clubs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black);
+}
+.feture-clubs h2 {
+  font-family: var(--lato);
+  font-size: 20px;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+.line {
+  width: 10%;
+  border-color: var(--orange);
+  margin-top: 0;
+  /* border: 5 px; */
+}
+.club-items {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.club-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.club-img {
+  width: 20%;
+  object-fit: none;
+}
+.club-title {
+  width: 20%;
+  padding: 10px;
+  font-family: var(--lato);
+  color: var(--orange);
+}
+.club-about {
+  width: 60%;
+  line-height: 1.2;
+  color: var(--gray);
+}
+.action-btn-wrap {
+  padding: 30px;
+}
+.action-btn {
+  background-color: var(--orange);
+  border: none;
+  color: whitesmoke;
+  font-family: var(--coco);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.speakers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.speakers-title {
+  font-family: var(--lato);
+  font-size: 20px;
+  color: var(--black);
+  letter-spacing: 1px;
+}
+
+.speaker-cards {
+  display: grid;
+  gap: 35px;
+  list-style: none;
+  padding: 0;
+}
+.card {
+  display: flex;
+  gap: 10px;
+}
+.card img {
+  width: 100px;
+  height: 100px;
+}
+.speaker-info {
+  font-family: var(--lato);
+}
+.name {
+  font-size: 15px;
+  color: var(--black);
+  margin: 0;
+}
+.about {
+  color: var(--orange);
+  font-style: italic;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0;
+}
+.line-gray {
+  width: 10%;
+  border-color: var(--gray);
+  margin: 5px 0;
+}
+.more {
+  color: var(--black);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: -0.8px;
+  margin-top: 0;
+}
+.more-btn {
+  background-color: white;
+  color: black;
+  font-family: var(--lato);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 90%;
+  height: 60px;
+}
+.arrow {
+  border: solid var(--orange);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 3px 10px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
