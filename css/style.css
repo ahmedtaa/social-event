@@ -9,6 +9,12 @@
   --coco: cocogoose, sans-serif;
 }
 
+body {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0;
+}
+
 /* Start Menu overlay */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -70,6 +76,41 @@
   }
 }
 /* End Menu overlat */
+/* Add a black background color to the top navigation */
+.topnav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  margin: 0 300px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: var(--black);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: var(--lato);
+  align-self: center;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: var(--orange);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  flex-grow: 3;
+  color: var(--orange);
+}
+.topnav a img {
+  height: 30px;
+}
+/* Start Desktop Nav*/
+
+/* End Desktop Nav */
 
 .header-wrap {
   padding: 10px 20px;
@@ -225,4 +266,10 @@
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
 }
