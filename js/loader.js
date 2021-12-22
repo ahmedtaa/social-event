@@ -1,24 +1,13 @@
-var speakersData = {
+const speakersData = {
   name: 'Ahmed',
   speaker_image: './img/profile-pic.jpg',
   about: 'some text random form some text random formsome text random form',
   more: 'some text random form some text random formsome text random form',
 };
-var speakers = document.querySelector('.speaker-cards');
-load(2);
-speakers.parentNode.innerHTML =
-  speakers.parentNode.innerHTML +
-  ` <button class="more-btn" onclick="loadMore()">MORE <i class="arrow down"></i> </button>  `;
-function loadMore() {
-  load(4);
-  document.querySelector('.more-btn').remove();
-}
 function load(x) {
-  var speakers = document.querySelector('.speaker-cards');
-  for (let i = 0; i < x; i++) {
-    speakers.innerHTML =
-      speakers.innerHTML +
-      `
+  const speakers = document.querySelector('.speaker-cards');
+  for (let i = 0; i < x; i += 1) {
+    speakers.innerHTML += `
     <li class="card">
         <img src="${speakersData.speaker_image}" alt="">
         <div class="speaker-info">
@@ -30,4 +19,17 @@ function load(x) {
     </li>
     `;
   }
+}
+function loadMore() {
+  load(4);
+  document.querySelector('.more-btn').remove();
+}
+
+const speakers = document.querySelector('.speaker-cards');
+load(2);
+speakers.parentNode.innerHTML += ` 
+<button class="more-btn" onclick="loadMore()">MORE <i class="arrow down"></i> </button>
+`;
+if (window.innerWidth > 768) {
+  loadMore();
 }

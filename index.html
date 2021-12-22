@@ -5,38 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <!-- eeedfe -->
+    <!--Start mobile nav  -->
     <div id="myNav" class="overlay">
-
         <!-- Button to close the overlay navigation -->
-        <a href="#" class="closebtn" onclick="closeNav()">
+        <a href="#" class="closebtn">
             <img src="./img/close.png" alt="">
         </a>
-
         <!-- Overlay content -->
         <div class="overlay-content">
-            <a onclick="closeNav()" href="#Portfolio">Portfolio</a>
-            <a onclick="closeNav()" href="#About">About</a>
-
+            <a href="#Portfolio">Portfolio</a>
+            <a href="#About">About</a>
         </div>
-
     </div>
-    <!-- ;ekdjelfe -->
-
     <nav class="mobile-nav header-wrap">
-        <a href="#"><img src="./img/hambuger.png" alt="" srcset="" onclick="openNav()"></a>
+        <a href="#"><img src="./img/hambuger.png" alt=""></a>
     </nav>
+    <!-- End mobile nav -->
+    <!-- Start Desktop Nav -->
+    <nav class="social-nav">
+        <a href=""><img src="./img/facebook.svg" alt="">
+        </a>
+        <a href=""><img src="./img/twitter.svg" alt=""></a>
+        <a href="#">English</a>
+        <a href="#">My Page</a>
+        <a href="#">Logout</a>
+    </nav>
+    <nav class="topnav">
+        <a class="active" href="#home"> <img src="./img/logo.png" alt=""></a>
+        <a href="#about">About</a>
+        <a href="#program">Porgram</a>
+        <a href="#join">Join</a>
+        <a href="#sponsor">Sponsor</a>
+        <a href="#news">News</a>
+        <button>Action btn</button>
+    </nav>
+    <!-- End Desktop Nav -->
     <header class="mobile-header header-wrap">
         <p class="title">Hello ClubhouserS</p>
         <h1>Bounce around and find incredible ROOMS</h1>
@@ -54,42 +63,42 @@
         <ul class="club-items">
             <li class="club-item">
                 <img src="./img/icon.png" alt="" class="club-img">
-                <h3 class="club-title">title</h3>
-                <p class="club-about">
-                    test test test test test test test test test test test test test test test
+                <h3 class="club-title">Lorem.</h3>
+                <p class="club-about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quaerat quisquam
+                    itaque sint maiores.
                 </p>
             </li>
             <li class="club-item">
                 <img src="./img/icon.png" alt="" class="club-img">
-                <h3 class="club-title"> tit titlddde</h3>
+                <h3 class="club-title">Lorem, ipsum.</h3>
+                <p class="club-about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam excepturi
+                    quisquam necessitatibus magni dolor!</p>
+            </li>
+            <li class="club-item">
+                <img src="./img/icon.png" alt="" class="club-img">
+                <h3 class="club-title">Lorem.</h3>
                 <p class="club-about">
-                    test test test test test test test test test test test test test test test
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo quod obcaecati unde velit eum!
                 </p>
             </li>
             <li class="club-item">
                 <img src="./img/icon.png" alt="" class="club-img">
-                <h3 class="club-title">title</h3>
+                <h3 class="club-title">lorem.</h3>
                 <p class="club-about">
-                    test test test test test test test test test test test test test test test
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sapiente tempora dicta labore
+                    voluptates.
                 </p>
             </li>
             <li class="club-item">
                 <img src="./img/icon.png" alt="" class="club-img">
-                <h3 class="club-title">title</h3>
+                <h3 class="club-title">Lorem, ipsum.</h3>
                 <p class="club-about">
-                    test test test test test test test test test test test test test test test
-                </p>
-            </li>
-            <li class="club-item">
-                <img src="./img/icon.png" alt="" class="club-img">
-                <h3 class="club-title">title</h3>
-                <p class="club-about">
-                    test test test test test test test test test test test test test test test
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum non neque aperiam commodi ipsam.
                 </p>
             </li>
         </ul>
         <div class="action-btn-wrap">
-            <button class="action-btn">Join the the the Club</button>
+            <button class="action-btn">Lorem, ipsum dolor.</button>
         </div>
     </section>
 
@@ -104,7 +113,21 @@
 
 
     </section>
-
+    <section class="partners">
+        <h2 class="partners-title">Partners</h2>
+        <hr class="line">
+        <div class="partners-img">
+            <img src="./img/clubhouse-logo.png" alt="">
+            <img src="./img/clubhouse-logo.png" alt="">
+            <img src="./img/clubhouse-logo.png" alt="">
+            <img src="./img/clubhouse-logo.png" alt="">
+            <img src="./img/clubhouse-logo.png" alt="">
+        </div>
+    </section>
+    <section class="footer">
+        <img src="./img/logo.png" alt="">
+        <p class="copy-rights">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, eveniet?</p>
+    </section>
 
     <script src="./js/main.js"></script>
     <script src="./js/loader.js"></script>

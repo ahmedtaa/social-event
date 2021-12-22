@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url(//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE);
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE");
 
 :root {
-  --gray: #d3d3d3;
+  --gray: #fff;
   --orange: #ec5242;
   --black: #272a31;
-  --lato: Lato, sans-serif;
+  --lato: lato, sans-serif;
   --coco: cocogoose, sans-serif;
+}
+
+body {
+  background-color: rgb(255 255 255);
+  padding: 0;
+  margin: 0;
 }
 
 /* Start Menu overlay */
@@ -18,7 +24,7 @@
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: rgb(255, 255, 255); /* Black fallback color */
+  background-color: rgb(255 255 255); /* Black fallback color */
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 
@@ -57,7 +63,6 @@
   font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
@@ -69,23 +74,113 @@
     right: 35px;
   }
 }
+
 /* End Menu overlat */
+
+/* Start Desktop Nav */
+
+/* Add a white background color to the top navigation */
+.topnav {
+  display: none;
+  justify-content: center;
+  background-color: rgb(255 255 255);
+  overflow: hidden;
+  padding: 0 200px;
+  gap: 2 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: 1px 1px 10px grey;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: var(--black);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: var(--lato);
+  align-self: center;
+}
+
+.social-nav a {
+  text-decoration: none;
+  font-family: var(--lato);
+  color: white;
+  font-size: 14px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: var(--orange);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  flex-grow: 3;
+  color: var(--orange);
+}
+
+.footer img {
+  height: 30px;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
+
+.partners-img img {
+  height: 30px;
+}
+
+.topnav a img {
+  height: 30px;
+}
+
+.topnav button {
+  background-color: white;
+  color: var(--orange);
+  font-family: var(--lato);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 20px;
+  height: 45px;
+  border: solid;
+  align-self: center;
+  flex-grow: 1;
+  margin-left: 60px;
+}
+
+.social-nav {
+  display: none;
+  gap: 30px;
+  justify-content: flex-end;
+  background-color: var(--black);
+  align-items: center;
+  padding: 0 200px;
+}
+
+/* End Desktop Nav */
 
 .header-wrap {
   padding: 10px 20px;
   background-color: var(--gray);
 }
+
 .title {
   font-family: var(--lato);
   font-size: 25px;
   color: var(--orange);
 }
+
 .mobile-header h1 {
   font-family: var(--coco);
   line-height: 1.2;
   color: var(--orange);
   text-transform: uppercase;
 }
+
 .header-p {
   border: 2px;
   border-style: solid;
@@ -93,53 +188,68 @@
   padding: 20px;
   font-family: var(--lato);
 }
+
 .feture-clubs {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--black);
 }
+
 .feture-clubs h2 {
   font-family: var(--lato);
   font-size: 20px;
   color: var(--gray);
   letter-spacing: 1px;
 }
+
 .line {
   width: 10%;
   border-color: var(--orange);
   margin-top: 0;
+
   /* border: 5 px; */
 }
+
 .club-items {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin-top: 15px;
 }
+
 .club-item {
   display: flex;
   align-items: center;
-  margin: 5px 5px;
-  background-color: rgba(255, 255, 255, 0.1);
+  margin: 5px;
+  background-color: rgb(255 255 255 / 10%);
 }
+
 .club-img {
   width: 20%;
   object-fit: none;
 }
+
 .club-title {
   width: 20%;
-  padding: 10px;
+
+  /* padding: 10px; */
   font-family: var(--lato);
   color: var(--orange);
 }
+
 .club-about {
   width: 60%;
   line-height: 1.2;
   color: var(--gray);
+  font-family: var(--lato);
 }
+
 .action-btn-wrap {
   padding: 30px;
 }
+
 .action-btn {
   background-color: var(--orange);
   border: none;
@@ -151,11 +261,13 @@
   display: inline-block;
   font-size: 16px;
 }
+
 .speakers {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .speakers-title {
   font-family: var(--lato);
   font-size: 20px;
@@ -169,22 +281,22 @@
   list-style: none;
   padding: 0;
 }
+
 .card {
   display: flex;
   gap: 10px;
 }
-.card img {
-  width: 100px;
-  height: 100px;
-}
+
 .speaker-info {
   font-family: var(--lato);
 }
+
 .name {
   font-size: 15px;
   color: var(--black);
   margin: 0;
 }
+
 .about {
   color: var(--orange);
   font-style: italic;
@@ -193,11 +305,13 @@
   line-height: 1.1;
   margin: 0;
 }
+
 .line-gray {
   width: 10%;
   border-color: var(--gray);
   margin: 5px 0;
 }
+
 .more {
   color: var(--black);
   font-size: 10px;
@@ -205,6 +319,7 @@
   letter-spacing: -0.8px;
   margin-top: 0;
 }
+
 .more-btn {
   background-color: white;
   color: black;
@@ -215,6 +330,7 @@
   width: 90%;
   height: 60px;
 }
+
 .arrow {
   border: solid var(--orange);
   border-width: 0 2px 2px 0;
@@ -222,7 +338,117 @@
   padding: 3px;
   margin: 3px 10px;
 }
+
 .down {
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+}
+
+/* partners */
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black);
+}
+
+.partners-title {
+  font-family: var(--lato);
+  font-size: 20px;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+
+.partners-img {
+  display: flex;
+  gap: 20px;
+  padding-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 30px;
+  background-color: var(--gray);
+}
+
+.footer p {
+  font-family: var(--lato);
+}
+
+@media (min-width: 768px) {
+  /* nav */
+  .mobile-nav {
+    display: none;
+  }
+
+  .topnav {
+    display: flex;
+  }
+
+  .social-nav {
+    display: flex;
+  }
+
+  .footer img {
+    height: 100px;
+  }
+
+  .social-nav a img {
+    filter: invert(1);
+  }
+
+  /* header */
+  .header-wrap {
+    padding: 180px 200px;
+  }
+
+  .header-wrap .title {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .header-wrap h1 {
+    font-size: 50px;
+  }
+
+  .header-wrap .header-p {
+    width: 60%;
+  }
+
+  .club-items {
+    flex-direction: row;
+    padding: 0 200px;
+  }
+
+  .club-item {
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .club-title {
+    height: 35px;
+  }
+
+  .club-about {
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    width: 90%;
+    line-height: 1;
+  }
+
+  .speaker-cards {
+    grid-template-columns: 450px 450px;
+  }
+
+  .footer {
+    gap: 100px;
+    padding: 50px 200px;
+  }
 }
