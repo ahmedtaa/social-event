@@ -20,13 +20,13 @@ function load(x) {
     `;
   }
 }
+function loadMore() {
+  load(4);
+  document.querySelector('.more-btn').remove();
+}
 
 const speakers = document.querySelector('.speaker-cards');
 load(2);
 speakers.parentNode.innerHTML += ` 
 <button class="more-btn" onclick="loadMore()">MORE <i class="arrow down"></i> </button>
 `;
-function loadMore() {
-  load(4);
-  document.querySelector('.more-btn').remove();
-}
