@@ -76,13 +76,16 @@ body {
   }
 }
 /* End Menu overlat */
-/* Add a black background color to the top navigation */
+
+/* Start Desktop Nav*/
+/* Add a white background color to the top navigation */
 .topnav {
-  display: flex;
+  display: none;
   justify-content: center;
   background-color: rgb(255, 255, 255);
   overflow: hidden;
-  margin: 0 300px;
+  margin: 0 200px;
+  gap: 2 0px;
 }
 
 /* Style the links inside the navigation bar */
@@ -108,8 +111,34 @@ body {
 .topnav a img {
   height: 30px;
 }
-/* Start Desktop Nav*/
-
+.topnav button {
+  background-color: white;
+  color: var(--orange);
+  font-family: var(--lato);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 20px;
+  height: 45px;
+  border: solid;
+  align-self: center;
+  flex-grow: 1;
+  margin-left: 60px;
+}
+.social-nav {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  background-color: var(--black);
+  align-items: center;
+  padding: 0 200px;
+}
+.social-nav a {
+  text-decoration: none;
+  font-family: var(--lato);
+  color: white;
+  font-size: 14px;
+}
 /* End Desktop Nav */
 
 .header-wrap {
@@ -271,5 +300,8 @@ body {
 @media (min-width: 768px) {
   .mobile-nav {
     display: none;
+  }
+  .topnav {
+    display: flex;
   }
 }
