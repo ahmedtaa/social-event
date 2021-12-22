@@ -1,13 +1,13 @@
-let hamburger_icon = document.querySelector('.mobile-nav a');
-hamburger_icon.addEventListener('click', () => {
+const HAMBURGER = document.querySelector('.mobile-nav a');
+HAMBURGER.addEventListener('click', () => {
   document.getElementById('myNav').style.width = '100%';
 });
-let close_icon = document.querySelector('.closebtn');
-close_icon.addEventListener('click', () => {
+const CLOSE_ICON = document.querySelector('.closebtn');
+CLOSE_ICON.addEventListener('click', () => {
   document.getElementById('myNav').style.width = '0';
 });
 
-let close_anchr = document.querySelector('.overlay-content');
-close_anchr.addEventListener('click', () => {
+const CLOSE_ANCHER = document.querySelector('.overlay-content');
+CLOSE_ANCHER.addEventListener('click', () => {
   document.getElementById('myNav').style.width = '0';
 });

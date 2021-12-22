@@ -395,6 +395,14 @@ body {
     display: flex;
   }
 
+  .footer img {
+    height: 100px;
+  }
+
+  .social-nav a img {
+    filter: invert(1);
+  }
+
   /* header */
   .header-wrap {
     padding: 180px 200px;
@@ -442,9 +450,5 @@ body {
   .footer {
     gap: 100px;
     padding: 50px 200px;
-  }
-
-  .footer img {
-    height: 100px;
   }
 }
