@@ -30,3 +30,6 @@ load(2);
 speakers.parentNode.innerHTML += ` 
 <button class="more-btn" onclick="loadMore()">MORE <i class="arrow down"></i> </button>
 `;
+if (window.innerWidth > 768) {
+  loadMore();
+}
