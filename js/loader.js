@@ -24,7 +24,6 @@ function loadMore() {
   load(4);
   document.querySelector('.more-btn').remove();
 }
-
 const speakers = document.querySelector('.speaker-cards');
 load(2);
 speakers.parentNode.innerHTML += ` 
