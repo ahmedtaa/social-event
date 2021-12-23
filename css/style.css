@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('//db.onlinewebfonts.com/c/d14035f6b1afeabafbee4abb2ebf0fc6?family=COCOGOOSE');
 
 :root {
   --gray: #fff;
@@ -120,6 +120,13 @@ body {
   color: var(--orange);
 }
 
+/* about html start */
+
+.homepage img {
+  height: 40px;
+}
+
+/* about html end */
 .footer img {
   height: 30px;
 }
@@ -181,12 +188,106 @@ body {
   text-transform: uppercase;
 }
 
+.header-title {
+  font-family: var(--coco);
+  line-height: 1.2;
+  color: var(--orange);
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .header-p {
   border: 2px;
   border-style: solid;
   border-color: whitesmoke;
   padding: 20px;
   font-family: var(--lato);
+}
+
+.about-p {
+  border: 2px;
+  border-style: solid;
+  border-color: whitesmoke;
+  padding: 5px;
+  font-family: var(--lato);
+  text-align: center;
+}
+
+.summit,
+.past {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: whitesmoke;
+  gap: 2px;
+  padding: 40px 0;
+}
+
+.summit-title,
+.past-title {
+  font-family: var(--coco);
+  line-height: 1.2;
+  color: var(--black);
+  text-align: center;
+  font-size: 20px;
+}
+
+.summit-p,
+.past-p {
+  padding: 5px;
+  font-family: var(--lato);
+  text-align: center;
+}
+
+.past-overlay {
+  margin: 0 20px;
+}
+
+.overlayy {
+  height: 180px;
+  width: 100%;
+  opacity: 1;
+  background-color: #b46445;
+  background-image: url('/img/overlay.jpg');
+  background-size: 100%;
+  background-blend-mode: overlay;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container p {
+  color: white;
+  font-family: var(--lato);
+  text-align: center;
+}
+
+.container h2 {
+  color: white;
+  font-family: var(--lato);
+  text-align: center;
+  font-size: 40px;
+  padding-top: 40px;
+  margin: 0;
+}
+
+.logo-in-border {
+  border: 2px;
+  border-style: solid;
+  border-color: var(--gray);
+  margin: 0 20px;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.img-in-border {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
 }
 
 .feture-clubs {
@@ -405,6 +506,7 @@ body {
 
   /* header */
   .header-wrap {
+    background-color: var(--gray);
     padding: 180px 200px;
   }
 
@@ -417,8 +519,27 @@ body {
     font-size: 50px;
   }
 
+  .header-wrap .header-title {
+    padding: 20px 200px;
+    font-size: 30px;
+  }
+
   .header-wrap .header-p {
     width: 60%;
+  }
+
+  .header-wrap .about-p {
+    width: 60%;
+  }
+
+  .about-about-p {
+    padding: 20px;
+    border: 2px;
+    border-style: solid;
+    border-color: whitesmoke;
+    font-family: var(--lato);
+    width: auto;
+    margin: 50px 150px;
   }
 
   .club-items {
@@ -450,5 +571,22 @@ body {
   .footer {
     gap: 100px;
     padding: 50px 200px;
+  }
+
+  .summit-title,
+  .summit-p,
+  .past-title,
+  .past-p {
+    padding: 0 400px;
+  }
+
+  .logo-in-border {
+    margin: 50px 550px;
+  }
+
+  .container {
+    flex-direction: row;
+    padding: 30px 300px;
+    gap: 15px;
   }
 }
