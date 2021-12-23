@@ -10,6 +10,10 @@
 - CSS
 - Javascript
 
+## Live demo
+
+[live-demo](https://ahmedtaa.github.io/social-event/)
+
 ## Authors
 
 👤 **Ahmedta**
