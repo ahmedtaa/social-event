@@ -1,31 +1,70 @@
-const speakersData = {
-  name: 'Ahmed',
-  speaker_image: './img/profile-pic.jpg',
-  about: 'some text random form some text random formsome text random form',
-  more: 'some text random form some text random formsome text random form',
-};
-function load(x) {
+const speakersData = [
+  {
+    name: 'lorem',
+    speaker_image: './img/speaker_01.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore recusandae quia.',
+    more: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur dolorum veritatis officiis ex. Hic quia at, harum doloremque placeat similique!',
+  },
+  {
+    name: 'lorem',
+    speaker_image: './img/speaker_02.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore recusandae quia.',
+    more: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur dolorum veritatis officiis ex. Hic quia at, harum doloremque placeat similique!',
+  },
+  {
+    name: 'loremc',
+    speaker_image: './img/speaker_03.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore recusandae quia.',
+    more: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur dolorum veritatis officiis ex. Hic quia at, harum doloremque placeat similique!',
+  },
+  {
+    name: 'lorem',
+    speaker_image: './img/speaker_04.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore recusandae quia.',
+    more: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur dolorum veritatis officiis ex. Hic quia at, harum doloremque placeat similique!',
+  },
+  {
+    name: 'lorem',
+    speaker_image: './img/speaker_05.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore recusandae quia.',
+    more: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur dolorum veritatis officiis ex. Hic quia at, harum doloremque placeat similique!',
+  },
+  {
+    name: 'lorem',
+    speaker_image: './img/speaker_06.png',
+    about:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore recusandae quia.',
+    more: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur dolorum veritatis officiis ex. Hic quia at, harum doloremque placeat similique!',
+  },
+];
+function load(x, y) {
   const speakers = document.querySelector('.speaker-cards');
-  for (let i = 0; i < x; i += 1) {
+  let i = y;
+  for (i; i < x; i += 1) {
     speakers.innerHTML += `
     <li class="card">
-        <img src="${speakersData.speaker_image}" alt="">
+        <img src="${speakersData[i].speaker_image}" alt="">
         <div class="speaker-info">
-            <h2 class="name">${speakersData.name}</h2>
-            <p class="about">${speakersData.about}</p>
+            <h2 class="name">${speakersData[i].name}</h2>
+            <p class="about">${speakersData[i].about}</p>
             <hr class="line-gray">
-            <p class="more">${speakersData.more}</p>
+            <p class="more">${speakersData[i].more}</p>
         </div>
     </li>
     `;
   }
 }
 function loadMore() {
-  load(4);
+  load(6, 2);
   document.querySelector('.more-btn').remove();
 }
 const speakers = document.querySelector('.speaker-cards');
-load(2);
+load(2, 0);
 speakers.parentNode.innerHTML += ` 
 <button class="more-btn" onclick="loadMore()">MORE <i class="arrow down"></i> </button>
 `;

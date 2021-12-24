@@ -177,7 +177,7 @@ body {
 
 .header-wrap {
   padding: 10px 20px;
-  background-color: var(--gray);
+  background-image: url('/img/main_big.png');
 }
 
 .title {
@@ -207,6 +207,7 @@ body {
   border-color: whitesmoke;
   padding: 20px;
   font-family: var(--lato);
+  background-color: white;
 }
 
 .about-p {
@@ -301,6 +302,7 @@ body {
   align-items: center;
   background-repeat: repeat;
   background-image: url('/img/pattern.png');
+  background-color: var(--black);
 }
 
 .feture-clubs h2 {
@@ -533,7 +535,7 @@ body {
 
   /* header */
   .header-wrap {
-    background-color: var(--gray);
+    /* background-color: var(--gray); */
     padding: 180px 200px;
   }
 
